@@ -1,0 +1,449 @@
+HTML
+The <!DOCTYPE html> declaration defines this document to be HTML5
+The <html> element is the root element of an HTML page
+The <head> element contains meta information about the document
+The <title> element specifies a title for the document
+The <body> element contains the visible page content
+
+HTML tags
+<tagname>content goes here...</tagname>
+
+Preferred encoding for HTML files
+UTF-8
+
+Sample format
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+Headings
+<h1> to <h6>
+<h1> defines the most important heading
+<h6> defines the least important heading
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+<h4>This is heading 4</h4>
+<h5>This is heading 5</h5>
+<h6>This is heading 6</h6>
+
+Paragraphs
+<p>This is a paragraph.</p>
+
+Links
+<a href="http://www.w3schools.com">This is a link</a>
+
+Images
+<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+
+Empty element
+Empty elements do not have an end tag
+<br>
+<hr>
+Empty elements can be "closed" in the opening tag like this: <br />.
+HTML5 does not require empty elements to be closed. But if you want stricter validation, or if you need to make your document readable by XML parsers, you must close all HTML elements properly.
+
+Attributes
+-> Lang Attribute
+<html lang="en-US">
+-> Title Attribute
+<p title="I'm a tooltip">
+This is a paragraph.
+</p>
+-> Href Attribute
+<a href="http://www.w3schools.com">This is a link</a>
+-> Size Attributes
+<img src="w3schools.jpg" width="104" height="142">
+-> Alt Attribute
+<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+
+HTML Attribute Reference
+http://www.w3schools.com/tags/ref_attributes.asp
+alt	-> Specifies an alternative text for an image, when the image cannot be displayed
+disabled -> Specifies that an input element should be disabled
+href -> Specifies the URL (web address) for a link
+id -> Specifies a unique id for an element
+src -> Specifies the URL (web address) for an image
+style -> Specifies an inline CSS style for an element
+title -> Specifies extra information about an element (displayed as a tool tip)
+
+Horizontal Rules
+<hr>
+
+<pre> Element
+The HTML <pre> element defines preformatted text.
+The text inside a <pre> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:
+<pre>
+   My Bonnie lies over the ocean.
+
+   My Bonnie lies over the sea.
+
+   My Bonnie lies over the ocean.
+   
+   Oh, bring back my Bonnie to me.
+</pre>
+Output:
+	My Bonnie lies over the ocean.
+
+   My Bonnie lies over the sea.
+
+   My Bonnie lies over the ocean.
+   
+   Oh, bring back my Bonnie to me.
+
+HTML Styles
+-> Background Color
+<body style="background-color:blue;">
+-> Text Color
+<h1 style="color:blue;">This is a heading</h1>
+-> Fonts
+<h1 style="font-family:verdana;">This is a heading</h1>
+-> Text Size
+<h1 style="font-size:300%;">This is a heading</h1>
+-> Text Alignment
+<h1 style="text-align:center;">Centered Heading</h1>
+
+HTML Text Formatting
+-> Bold
+<b>This text is bold</b>
+-> Strong
+<strong>This text is strong</strong>
+-> Italic
+<i>This text is italic</i>
+-> Emphasis
+<em>This text is emphasized</em>
+-> Small
+<h2>HTML <small>Small</small> Formatting</h2>
+-> Highlight
+<h2>HTML <mark>Marked</mark> Formatting</h2>
+-> Strike the word
+<p>My favorite color is <del>blue</del> red.</p>
+-> Insert text
+<p>My favorite <ins>color</ins> is red.</p>
+-> Subscript
+<p>This is <sub>subscripted</sub> text.</p>
+-> Superscript
+<p>This is <sup>superscripted</sup> text.</p>
+
+HTML Quotation and Citation Elements
+-> Short Quotations
+<p>Browsers usually insert quotation marks around the q element.</p>
+<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+-> Quotations
+<p>Browsers usually indent blockquote elements.</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+For 50 years, WWF has been protecting the future of nature.
+The world's leading conservation organization,
+WWF works in 100 countries and is supported by
+1.2 million members in the United States and
+close to 5 million globally.
+</blockquote>
+Output:
+Browsers usually indent blockquote elements.
+	For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+-> Abbreviations
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+Output:
+The WHO was founded in 1948.
+-> Contact Information
+The <address> element is usually displayed in italic. Most browsers will add a line break before and after the element.
+<address>
+Written by John Doe.<br>
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address>
+-> Work Title
+The HTML <cite> element defines the title of a work.
+Browsers usually display <cite> elements in italic.
+<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+-> Bi-Directional Override
+<bdo dir="rtl">This text will be written from right to left</bdo>
+This line will be written from right to left
+<bdo dir="ltr">This line will be written from right to left</bdo>
+This line will be written from right to left
+
+HTML Computer Code Elements
+-> Keyboard Input
+<p><kbd>File | Open...</kbd></p>
+-> Computer Output
+<samp>
+demo.example.com login: Apr 12 09:10:17
+Linux 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189
+</samp>
+-> Code
+<pre>
+<code>
+var x = 5;
+var y = 6;
+document.getElementById("demo").innerHTML = x + y;
+</code>
+</pre>
+<pre> element preserve extra whitespace and line-breaks.
+-> Variables
+<p>Einstein wrote: <var>E</var> = <var>m</var><var>c</var><sup>2</sup>.</p>
+Einstein wrote: E = mc2.
+
+HTML Comment Tags
+<!-- Write your comments here -->
+-> Conditional Comments
+<!--[if IE 9]>
+    .... some HTML here ....
+<![endif]-->
+
+HTML Colors
+http://www.w3schools.com/html/html_colors.asp
+http://www.w3schools.com/colors/colors_picker.asp
+A color is specified by an RGB value
+Formula: rgb(red, green, blue)
+Red -> rgb(255,0,0)
+Black -> rgb(0,0,0)
+White -> rgb(255,255,255)
+<h2 style="background-color:rgb(255,0,0)">
+HEX Value
+Format -> #RRGGBB
+max and min -> 00 and FF
+<h2 style="background-color:#000000;color:white">
+<h2 style="background-color:#808080;color:white">
+
+HTML Styles - CSS
+3 ways
+Inline - by using the style attribute in HTML elements
+Internal - by using a <style> element in the <head> section
+External - by using an external CSS file
+-> Inline CSS
+<h1 style="color:blue;">This is a Blue Heading</h1>
+-> Internal CSS
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+-> External CSS
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+style.css
+body {
+    background-color: powderblue;
+}
+h1 {
+    color: blue;
+}
+p {
+    color: red;
+}
+CSS Fonts
+h1 {
+    color: blue;
+    font-family: verdana;
+    font-size: 300%;
+}
+CSS Border
+p {
+    border: 1px solid powderblue;
+}
+CSS Padding
+p {
+    border: 1px solid powderblue;
+    padding: 30px;
+}
+CSS Margin
+p {
+    border: 1px solid powderblue;
+    margin: 50px;
+}
+id Attribute
+To define a specific style for one special element, add an id attribute to the element
+<p id="p01">I am different</p>
+#p01 {
+    color: blue;
+}
+class Attribute
+To define a style for a special type of elements, add a class attribute to the element
+<p class="error">I am different</p>
+p.error {
+    color: red;
+}
+Border Vs Padding Vs Margin
+CSS border property for borders
+CSS padding property for space inside the border
+CSS margin property for space outside the border
+
+HTML Links
+<a href="http://www.w3schools.com/html/">Visit our HTML tutorial</a>
+Local Links
+<a href="html_images.asp">HTML Images</a>
+Link Styles<style>
+a:link    {color:green; background-color:transparent; text-decoration:none}
+a:visited {color:pink; background-color:transparent; text-decoration:none}
+a:hover   {color:red; background-color:transparent; text-decoration:underline}
+a:active  {color:yellow; background-color:transparent; text-decoration:underline}
+</style>
+Link Attributes
+_blank - Opens the linked document in a new window or tab
+_self - Opens the linked document in the same window/tab as it was clicked (this is default)
+_parent - Opens the linked document in the parent frame
+_top - Opens the linked document in the full body of the window
+framename - Opens the linked document in a named frame
+Image as Link
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+</a>
+Bookmark
+<p><a href="#C4">Jump to Chapter 4</a></p>
+<h2>Chapter 1</h2>
+<p>This chapter explains ba bla bla</p>
+<h2>Chapter 2</h2>
+<p>This chapter explains ba bla bla</p>
+<h2>Chapter 3</h2>
+<p>This chapter explains ba bla bla</p>
+<h2 id="C4">Chapter 4</h2>
+<p>This chapter explains ba bla bla</p>
+<h2>Chapter 5</h2>
+<p>This chapter explains ba bla bla</p>
+
+HTML Images
+<img src="pic_mountain.jpg" alt="Mountain View" style="width:304px;height:228px;">
+<img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+<img src="http://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+<img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+Image Floating
+Use the CSS float property to let the image float to the right or to the left of a text
+<p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+The image will float to the right of the text.</p>
+<p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+The image will float to the left of the text.</p>
+Image Maps
+Use the <map> tag to define an image-map. An image-map is an image with clickable areas.
+<img src="planets.gif" alt="Planets" usemap="#planetmap" style="width:145px;height:126px;">
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.htm">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="venus.htm">
+</map>
+
+HTML Tables
+http://www.w3schools.com/html/html_tables.asp
+<tr> - Table row
+<th> - Table header
+<td> - Table data
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+
+HTML Lists
+http://www.w3schools.com/html/html_lists.asp
+Unordered HTML List
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+Ordered HTML List
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+HTML Block and Inline Elements
+http://www.w3schools.com/html/html_blocks.asp
+<div>	Defines a section in a document (block-level)
+<span>	Defines a section in a document (inline)
+-> Block-level Elements
+<div>
+<h1> - <h6>
+<p>
+<form>
+-> Inline Elements
+<span>
+<a>
+<img>
+
+HTML The class Attribute
+http://www.w3schools.com/html/html_classes.asp
+
+HTML Iframes
+<iframe src="demo_iframe.htm" height="200" width="300"></iframe>
+<iframe src="demo_iframe.htm" style="border:none;"></iframe>
+<iframe src="demo_iframe.htm" style="border:2px solid grey;"></iframe>
+Iframe - Target for a Link
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="http://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+HTML Head
+-> HTML <style> Element
+<style>
+  body {background-color: powderblue;}
+  h1 {color: red;}
+  p {color: blue;}
+</style>
+-> HTML <link> Element
+<link rel="stylesheet" href="mystyle.css">
+-> HTML <meta> Element
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Hege Refsnes">
+  <meta http-equiv="refresh" content="30">
+</head>
+-> HTML <script> Element
+<script>
+function myFunction {
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+</script>
+-> HTML <base> Element
+http://www.w3schools.com/html/tryit.asp?filename=tryhtml_head_base
+<base href="http://www.w3schools.com/images/" target="_blank">
+
+HTML Layouts
+http://www.w3schools.com/html/html_layout.asp
+
+HTML Responsive Web Design
+http://www.w3schools.com/html/html_responsive.asp
+
+HTML Entities
+http://www.w3schools.com/html/html_entities.asp
+
+HTML Symbols
+http://www.w3schools.com/html/html_symbols.asp
+
+HTML Encoding (Character Sets)
+http://www.w3schools.com/html/html_charset.asp
+
+HTML Uniform Resource Locators
+http://www.w3schools.com/html/html_urlencode.asp
+scheme://prefix.domain:port/path/filename
+
+HTML and XHTML
+http://www.w3schools.com/html/html_xhtml.asp
+XHTML is HTML written as XML.

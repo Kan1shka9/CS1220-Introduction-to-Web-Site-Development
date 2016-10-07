@@ -1,0 +1,630 @@
+CSS Syntax
+p {
+    color: red;
+    text-align: center;
+}
+
+id Selector
+<p id="para1">Hello World!</p>
+#para1 {
+    text-align: center;
+    color: red;
+}
+
+class Selector
+.center {
+    text-align: center;
+    color: red;
+}
+Will effect all the elements with the class center
+p.center {
+    text-align: center;
+    color: red;
+}
+Will effect all the p elements with the class center
+<style>
+p.center {
+    text-align: center;
+    color: red;
+}
+
+p.large {
+    font-size: 300%;
+}
+</style>
+<p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p>
+Both css attribues will be allpied to the p elements
+
+Grouped selectors
+h1, h2, p {
+    text-align: center;
+    color: red;
+}
+
+CSS Comments
+/* This is a single-line comment */
+
+Three Ways to Insert CSS
+-> External style sheet
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+-> Internal style sheet
+Internal styles are defined within the <style> element, inside the <head> section of an HTML page
+<head>
+<style>
+body {
+    background-color: linen;
+}
+
+h1 {
+    color: maroon;
+    margin-left: 40px;
+} 
+</style>
+</head>
+
+-> Inline style
+<h1 style="color:blue;margin-left:30px;">This is a heading.</h1>
+
+Multiple Style Sheets
+If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. 
+Inline style (inside a specific HTML element) has the highest priority
+
+CSS Colors
+http://www.w3schools.com/css/css_colors.asp
+red
+rgb(255, 0, 0)
+#ff0000
+
+CSS Backgrounds
+-> background-color
+h1 {
+    background-color: green;
+}
+
+-> background-image
+body {
+    background-image: url("paper.gif");
+}
+
+-> background-repeat
+Repeat horizontally
+body {
+    background-image: url("gradient_bg.png");
+    background-repeat: repeat-x;
+}
+Repeat vertically
+body {
+    background-image: url("gradient_bg.png");
+    background-repeat: repeat-y;
+}
+No repeat
+body {
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+}
+
+-> background-attachment
+body {
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+-> background-position
+body {
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+-> Background - Shorthand property
+body {
+    background: #ffffff url("img_tree.png") no-repeat right top;
+}
+When using the shorthand property the order of the property values is:
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+CSS Borders
+-> Border Style
+dotted - Defines a dotted border
+p.dotted {border-style: dotted;}
+
+dashed - Defines a dashed border
+p.dashed {border-style: dashed;}
+
+solid - Defines a solid border
+p.solid {border-style: solid;}
+
+double - Defines a double border
+p.double {border-style: double;}
+
+groove - Defines a 3D grooved border. The effect depends on the border-color value
+p.groove {border-style: groove;}
+
+ridge - Defines a 3D ridged border. The effect depends on the border-color value
+p.ridge {border-style: ridge;}
+
+inset - Defines a 3D inset border. The effect depends on the border-color value
+p.inset {border-style: inset;}
+
+outset - Defines a 3D outset border. The effect depends on the border-color value
+p.outset {border-style: outset;}
+
+none - Defines no border
+p.none {border-style: none;}
+
+hidden - Defines a hidden border
+p.hidden {border-style: hidden;}
+
+Mixed
+p.mix {border-style: dotted dashed solid double;}
+
+-> Border Width
+Width size - px, pt, cm, em
+p.one {
+    border-style: solid;
+    border-width: 5px;
+}
+
+p.two {
+    border-style: solid;
+    border-width: medium;
+}
+
+p.three {
+    border-style: solid;
+    border-width: 2px 10px 4px 20px;
+}
+
+-> Border Color
+p.one {
+    border-style: solid;
+    border-color: red;
+}
+
+p.two {
+    border-style: solid;
+    border-color: green;
+}
+
+p.three {
+    border-style: solid;
+    border-color: red green blue yellow;
+}
+
+-> Border - Individual Sides
+p {
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+}
+
+-> Border - Shorthand Property
+p {
+    border: 5px solid red;
+}
+
+-> Left Border
+p {
+    border-left: 6px solid red;
+    background-color: lightgrey;
+}
+
+-> Bottom Border
+p {
+    border-bottom: 6px solid red;
+    background-color: lightgrey;
+}
+
+-> Rounded Borders
+p {
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+CSS Margins
+CSS margin properties are used to generate space around elements.
+p {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+Shorthand
+p {
+    margin: 100px 150px 100px 80px;
+}
+-> The auto Value
+Horizontally center the element within its container
+div {
+    width: 300px;
+    margin: auto;
+    border: 1px solid red;
+}
+-> The inherit Value
+div.container {
+    border: 1px solid red;
+    margin-left: 100px;
+}
+
+p.one {
+    margin-left: inherit;
+}
+
+-> Margin Collapse
+Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+This does not happen on horizontal margins (left and right)! Only vertical margins (top and bottom)!
+h1 {
+    margin: 0 0 50px 0;
+}
+
+h2 {
+    margin: 20px 0 0 0;
+}
+
+CSS Padding
+CSS padding properties are used to generate space around content.
+p {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+Shorthand 
+p {
+    padding: 50px 30px 50px 80px;
+}
+
+CSS Height and Width
+div {
+    height: 200px;
+    width: 50%;
+    background-color: powderblue;
+}
+Setting max-width
+div {
+    max-width: 500px;
+    height: 100px;
+    background-color: powderblue;
+}
+
+CSS Box Model
+Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent
+div {
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+
+CSS Outline
+The CSS outline properties specify the style, color, and width of an outline.
+An outline is a line that is drawn around elements (outside the borders) to make the element "stand out".
+However, the outline property is different from the border property - The outline is NOT a part of an element's dimensions; the element's total width and height is not affected by the width of the outline.
+-> Outline Style
+p {
+    border: 1px solid black;
+    outline-color: red;
+}
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+-> Outline Color
+p {
+    border: 1px solid black;
+    outline-style: double;
+    outline-color: red;
+}
+-> Outline Width
+p {border: 1px solid black;}
+
+p.one {
+    outline-style: double;
+    outline-color: red;
+    outline-width: thick;
+}
+
+p.two {
+    outline-style: double;
+    outline-color: green;
+    outline-width: 3px;
+}
+-> Outline - Shorthand property
+p {
+    border: 1px solid black;
+    outline: 5px dotted red;
+}
+-> outline-offset	
+Specifies the space between an outline and the edge or border of an element
+
+CSS Text
+-> Text Color
+body {
+    color: blue;
+}
+h1 {
+    color: green;
+}
+-> Text Alignment
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: left;
+}
+h3 {
+    text-align: right;
+}
+div {
+    text-align: justify;
+}
+-> Text Decoration
+a {
+    text-decoration: none;
+}
+h1 {
+    text-decoration: overline;
+}
+h2 {
+    text-decoration: line-through;
+}
+h3 {
+    text-decoration: underline;
+}
+-> Text Transformation
+p.uppercase {
+    text-transform: uppercase;
+}
+
+p.lowercase {
+    text-transform: lowercase;
+}
+
+p.capitalize {
+    text-transform: capitalize;
+}
+-> Text Indentation
+Used to specify the indentation of the first line of a text
+p {
+    text-indent: 50px;
+}
+-> Letter Spacing
+Used to specify the space between the characters in a text
+h1 {
+    letter-spacing: 3px;
+}
+h2 {
+    letter-spacing: -3px;
+}
+-> Line Height
+p.small {
+    line-height: 0.7;
+}
+p.big {
+    line-height: 1.8;
+}
+-> Text Direction
+div {
+    direction: rtl;
+}
+-> Word Spacing
+h1 {
+    word-spacing: 10px;
+}
+h2 {
+    word-spacing: -5px;
+}
+
+CSS Fonts
+generic family - a group of font families with a similar look (like "Serif" or "Monospace")
+font family - a specific font family (like "Times New Roman" or "Arial")
+-> Font Family
+p {
+    font-family: "Times New Roman", Times, serif;
+}
+-> Font Style
+p.normal {
+    font-style: normal;
+}
+p.italic {
+    font-style: italic;
+}
+p.oblique {
+    font-style: oblique;
+}
+-> Font Size
+1em is 16px
+h1 {
+    font-size: 40px;
+}
+h1 {
+    font-size: 2.5em; /* 40px/16=2.5em */
+}
+Use a Combination of Percent and Em
+body {
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.875em;
+}
+
+p {
+    font-size: 0.875em;
+}
+-> Font Weight
+p.normal {
+    font-weight: normal;
+}
+p.thick {
+    font-weight: bold;
+}
+-> Font Variant
+The font-variant property specifies whether or not a text should be displayed in a small-caps font.
+In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.
+p.normal {
+    font-variant: normal;
+}
+p.small {
+    font-variant: small-caps;
+}
+
+CSS Icons
+Font Awesome Icons
+Bootstrap Icons
+Google Icons
+
+CSS Links
+-> Styling Links
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+-> Text Decoration
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+-> Background Color
+a:link {
+    background-color: yellow;
+}
+
+a:visited {
+    background-color: cyan;
+}
+
+a:hover {
+    background-color: lightgreen;
+}
+
+a:active {
+    background-color: hotpink;
+} 
+
+CSS Lists
+-> Different List Item Markers
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+ol.c {
+    list-style-type: upper-roman;
+}
+
+ol.d {
+    list-style-type: lower-alpha;
+}
+-> An Image as The List Item Marker
+ul {
+    list-style-image: url('sqpurple.gif');
+}
+-> Position The List Item Markers
+ul {
+    list-style-position: inside;
+}
+-> List - Shorthand property
+ul {
+    list-style: square inside url("sqpurple.gif");
+}
+-> Styling List With Colors
+ol {
+    background: #ff9999;
+    padding: 20px;
+}
+
+ul {
+    background: #3399ff;
+    padding: 20px;
+}
+
+ol li {
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+}
+
+ul li {
+    background: #cce5ff;
+    margin: 5px;
+}
+
+CSS Tables
+-> Table Borders
+table, th, td {
+   border: 1px solid black;
+}
+-> Collapse Table Borders
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+-> Table Width and Height
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+
+The clearfix Hack - overflow: auto;
+If an element is taller than the element containing it, and it is floated, it will overflow outside of its container.
+Then we can add overflow: auto; to the containing element to fix this problem
+.clearfix {
+    overflow: auto;
+}
